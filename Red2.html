@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Red Dead Redemption</title>
+	<style> .oculto{
+        display: none;
+    }
+
+
+		body {
+			background-color: rgb(143, 10, 10);
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			color: #000;
+			font-size: 36px;
+			text-align: center;
+			padding: 50px 0;
+			text-shadow: 2px 2px #fff;
+		}
+		.container {
+			width: 80%;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			padding: 50px 0;
+		}
+		.card {
+			background-color: #fff;
+			box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+			border-radius: 10px;
+			padding: 30px;
+			margin: 20px;
+			width: 300px;
+			text-align: center;
+			transition: box-shadow 0.3s ease-in-out;
+		}
+		.card:hover {
+			box-shadow: 6px 6px 12px rgba(0,0,0,0.6);
+		}
+		.card:hover h2, .card:hover p {
+			text-shadow: 2px 2px #000;
+			color: #fff;
+		}
+		h2 {
+			font-size: 24px;
+			color: #000;
+			margin-bottom: 20px;
+			text-shadow: 2px 2px #fff;
+		}
+		p {
+			font-size: 18px;
+			color: #666;
+			text-shadow: 2px 2px #fff;
+		}
+		.shadow {
+			box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+		}
+	</style>
+   <script>
+    function cambiar(){
+        document.getElementById('body').style.backgroundColor= 'rgb(0,3,0,84)';
+    }
+</script>
+</head>
+<body id="body">
+    <button onclick="cambiar();">Cambiar fondo</button>
+    <div class="container">
+<div class="card shadow">
+			<h2>Red Dead Redemption II</h2>
+			<img id="imagen" src="https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA08519_00/12/i_3da1cf7c41dc7652f9b639e1680d96436773658668c7dc3930c441291095713b/i/icon0.png" alt="Arthur" width="250px">
+            <button onclick="cambiarAtributo()">Cambiar imagen</button>
+            <button onclick="regresarAtributo()">Regresar imagen</button>
+            <h3>Fecha de lanzamiento:</h3><p>26 de octubre del 2018</p>
+            <h3>Desarolldor:</h3><p>Rockstar Games</p>
+            <h3>Reseña:</h3><p id="miParrafo">Es un videojuego de Mundo abierto con tematica del lejano oeste estado unidense,
+                este cuenta con perspectivas de jugador en primera y tercera persona,en la historia principal
+                el jugador controla al personaje Arthur Morgan llevandolo a diversas misiones de este mismo. Mientras
+                que en el Modo de juego Online podras crear un personaje a gusto propio que luego podras introducirlo
+                al Mundo abierto del cual es Arthur.</p>
+                <button onclick="cambiarTexto()">Cambiar Texto</button> <br> <br>
+                <img style="height: 150px" src="https://i.blogs.es/55428f/red-dead-pelis/1366_2000.jpeg"><p>
+                    <img style="height: 150px" src="https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA08519_00/12/i_3da1cf7c41dc7652f9b639e1680d96436773658668c7dc3930c441291095713b/i/icon0.png"><p>
+             <h3>Clasificación:</h3><p>PEGI 18</p>
+             <h2 id="mensaje">Hola Mundo</h2>
+             <button onclick="ocultarMensaje()">Ocultar Mensaje</button> 
+             <div id="miDiv"></div>
+             <button onclick="escribirTexto()">Generar Texto</button>
+
+
+             <script> function cambiarAtributo() {
+                document.getElementById("imagen").src = "https://phantom-marca.unidadeditorial.es/c790c824610dd5b47eeaa7644d097ca4/resize/1320/f/jpg/assets/multimedia/imagenes/2021/11/08/16363766016147.jpg";
+            }
+            function regresarAtributo(){
+                document.getElementById("imagen").src ="https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA08519_00/12/i_3da1cf7c41dc7652f9b639e1680d96436773658668c7dc3930c441291095713b/i/icon0.png";
+            } 
+            function ocultarMensaje(){
+                var mensaje = document.getElementById("mensaje");
+            mensaje.classList.add("oculto");
+
+            } function escribirTexto(){
+            var div = document.getElementById("miDiv");
+            var texto= document.createElement("h1");
+            texto.textContent="Este texto no lo escribio JuanJose, lo escribio JavaScript";
+            div.appendChild(texto);
+        }  var nuevoTexto = "Arriba las Chivas";
+        function cambiarTexto(){
+            var parrafo = document.getElementById("miParrafo");
+            parrafo.textContent = nuevoTexto;
+        }
+            </script>
+    		</div>
+
+
+
+	</div>
+</body>
+</html>
